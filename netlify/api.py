@@ -7,6 +7,8 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
 
+os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
+
 # disni - Skin rasha predictor
 
 import numpy as np
