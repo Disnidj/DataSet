@@ -14,6 +14,13 @@ from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
+
+# os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+# Set the TF_ENABLE_ONEDNN_OPTS environment variable to 0
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+
+
 import tensorflow as tf
 from bson import ObjectId
 
@@ -34,10 +41,6 @@ from db_connection import get_db_connection
 # Get the MongoDB collection - anodya
 videos_collection = get_db_connection()
 
-# os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-# Set the TF_ENABLE_ONEDNN_OPTS environment variable to 0
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 load_dotenv()
 # Replace the hardcoded connection string with the environment variable
