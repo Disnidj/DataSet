@@ -421,8 +421,8 @@ def load_skin_rash_model(model_path):
     return model
 
 # Load the models when the app starts
-normal_abnormal_model = load_skin_rash_model('./model/skin_rash_model2.h5')
-skin_rash_type_model = load_skin_rash_model('./model/skin_rash_model.h5')
+normal_abnormal_model = load_skin_rash_model('model/skin_rash_model2.h5')
+skin_rash_type_model = load_skin_rash_model('model/skin_rash_model.h5')
 
 # Function to preprocess the uploaded image
 def preprocess_image(image_path):
