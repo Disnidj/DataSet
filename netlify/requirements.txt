@@ -1,7 +1,7 @@
 Flask==3.0.0
 Flask-Cors==4.0.0
 numpy==1.24.3
-pandas==2.1.0
+pandas==1.4.1  # Use a valid Pandas version
 Pillow==9.5.0
 scikit-learn==1.2.2
 tensorflow==2.13.0
