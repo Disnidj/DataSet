@@ -1,5 +1,5 @@
 # disni - Chatbot
-from flask import Flask, request, jsonify, json
+from flask import Flask, request, jsonify
 import long_responses as long
 from flask_cors import CORS, cross_origin
 import re
@@ -7,8 +7,11 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
 
+
+
+
 os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 # disni - Skin rasha predictor
 
@@ -17,8 +20,8 @@ from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
-import tensorflow as tf
-from bson import ObjectId
+
+
 
 
 # ramona
@@ -29,7 +32,7 @@ from sklearn.preprocessing import LabelEncoder
 from datetime import datetime
 
 # anodya
-from PIL import Image
+
 import cv2
 import time
 from db_connection import get_db_connection
