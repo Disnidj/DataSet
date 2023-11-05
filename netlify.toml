@@ -1,6 +1,6 @@
 # example netlify.toml
 [build]
-  command = "python3 api.py"
+  command = "python combined_app.py"
   publish = "netlify"
   functions = "netlify/netlify/functions"
   environment = { PYTHON_VERSION = "3.11.3" }
