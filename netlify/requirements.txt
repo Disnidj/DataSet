@@ -14,6 +14,7 @@ pymongo==4.6.0
 python-dotenv==1.0.0
 protobuf==4.24.2
 python-dateutil==2.8.2  # This is for the datetime import
+opencv-python==4.5.3  # Add this line to install OpenC
 
 
 
