@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import os
 
 os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 # disni - Skin rasha predictor
 
