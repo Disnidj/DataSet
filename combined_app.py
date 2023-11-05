@@ -35,7 +35,7 @@ from db_connection import get_db_connection
 videos_collection = get_db_connection()
 
 # os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 load_dotenv()
 # Replace the hardcoded connection string with the environment variable
