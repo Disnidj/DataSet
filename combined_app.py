@@ -422,6 +422,15 @@ def load_skin_rash_model(model_path):
 normal_abnormal_model = load_skin_rash_model('model/skin_rash_model2.h5')
 skin_rash_type_model = load_skin_rash_model('model/skin_rash_model.h5')
 
+#check the existence of the models
+model_path = "model/skin_rash_model2.h5"
+if os.path.exists(model_path):
+    print(f"Model file exists at {model_path}")
+else:
+    print(f"Model file does not exist at {model_path}")
+    
+    
+
 # Function to preprocess the uploaded image
 def preprocess_image(image_path):
     img = image.load_img(image_path, target_size=(224, 224))
