@@ -18,11 +18,11 @@ from tensorflow.keras.preprocessing import image
 # os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-# Print the value of TF_ENABLE_ONEDNN_OPTS
-print("TF_ENABLE_ONEDNN_OPTS:", os.environ.get("TF_ENABLE_ONEDNN_OPTS"))
+# # Print the value of TF_ENABLE_ONEDNN_OPTS
+# print("TF_ENABLE_ONEDNN_OPTS:", os.environ.get("TF_ENABLE_ONEDNN_OPTS"))
 
-# Set the TF_ENABLE_ONEDNN_OPTS environment variable to 0
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+# # Set the TF_ENABLE_ONEDNN_OPTS environment variable to 0
+# os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 
 import tensorflow as tf
