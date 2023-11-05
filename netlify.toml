@@ -3,7 +3,8 @@
   command = "python combined_app.py"
   publish = "netlify"
   functions = "netlify/netlify/functions"
-  environment = { PYTHON_VERSION = "3.11.3" }
+  environment = { PYTHON_VERSION = "3.8" }
+
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
