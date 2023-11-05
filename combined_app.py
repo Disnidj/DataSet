@@ -34,6 +34,8 @@ from db_connection import get_db_connection
 # Get the MongoDB collection - anodya
 videos_collection = get_db_connection()
 
+# os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 load_dotenv()
 # Replace the hardcoded connection string with the environment variable
@@ -895,6 +897,23 @@ def prediction_history():
 # # end of video prediction
 
 
+# backend hosting test
+
+# Your /api/ endpoints
+@app.route('/api/hello', methods=['GET'])
+def hello():
+    return jsonify({"message": "Hello from your Flask API!"})
+
+@app.route('/api/goodbye', methods=['GET'])
+def goodbye():
+    return jsonify({"message": "Goodbye from your Flask API!"})
+
+@app.route('/api/custom_endpoint', methods=['POST'])
+def custom_endpoint():
+    # Your custom endpoint logic here
+    data = request.json  # Access JSON data from the request
+    response_data = {"received_data": data}
+    return jsonify(response_data)
 
 
 if __name__ == '__main__':
