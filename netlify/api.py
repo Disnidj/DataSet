@@ -418,7 +418,12 @@ UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Define a function to load your skin rash classification model
-def load_skin_rash_model(model_path):
+# def load_skin_rash_model(model_path):
+#     model = load_model(model_path)
+#     return model
+
+def load_skin_rash_model(model_filename):
+    model_path = os.path.join(os.path.dirname(__file__), model_filename)
     model = load_model(model_path)
     return model
 
