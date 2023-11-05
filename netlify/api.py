@@ -420,8 +420,8 @@ def load_skin_rash_model(model_path):
     return model
 
 # Load the models when the app starts
-normal_abnormal_model = load_skin_rash_model('models/skin_rash_model2.h5')
-skin_rash_type_model = load_skin_rash_model('models/skin_rash_model.h5')
+normal_abnormal_model = load_skin_rash_model('model/skin_rash_model2.h5')
+skin_rash_type_model = load_skin_rash_model('model/skin_rash_model.h5')
 
 # Function to preprocess the uploaded image
 def preprocess_image(image_path):
@@ -687,7 +687,7 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 # Define the relative paths to the directories you want to create
 VIDEO_DIR = os.path.join(current_directory, "Predictedvideos")
 RECORDED_VIDEO_DIR = os.path.join(current_directory, "recorded_videos")
-MODEL_PATH = os.path.join(current_directory, "models", "LRCN_model.h5")
+MODEL_PATH = os.path.join(current_directory, "model", "LRCN_model.h5")
 
 
 for directory in [VIDEO_DIR, RECORDED_VIDEO_DIR]:
